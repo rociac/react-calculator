@@ -8,6 +8,10 @@
 - CSS,
 - React
 
+## Live Demo
+
+[Live Demo Link](https://calculator-rociac.herokuapp.com/)
+
 ## Installation
 
 1. Clone the repository in your local folder.
