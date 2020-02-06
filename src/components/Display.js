@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Display.css';
 
 const display = ({ result }) => (
-  <div className="display">
-    <p>{result}</p>
-  </div>
+  <div className="display">{result}</div>
 );
 
 display.defaultProps = {
