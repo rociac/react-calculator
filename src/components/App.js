@@ -7,8 +7,10 @@ function App() {
   return (
     <div className="App">
       <h1>React Calculator</h1>
-      <Display />
-      <ButtonPanel />
+      <div className="calculator">
+        <Display />
+        <ButtonPanel />
+      </div>
     </div>
   );
 }
