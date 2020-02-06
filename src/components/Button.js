@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Button.css';
 
-const button = ({ name, width, background }) => (
+const button = ({ name, background, wide }) => (
   <button
-    style={{ backgroundColor: background, width }}
+    style={wide ? { width: '50%', backgroundColor: background } : { width: '25%', backgroundColor: background }}
     className="button"
     type="button"
   >
@@ -14,13 +14,13 @@ const button = ({ name, width, background }) => (
 
 button.propTypes = {
   name: PropTypes.string.isRequired,
-  width: PropTypes.string,
+  wide: PropTypes.bool,
   background: PropTypes.string,
 };
 
 button.defaultProps = {
-  width: '25%',
-  background: 'grey',
+  wide: false,
+  background: 'orange',
 };
 
 export default button;
