@@ -11,8 +11,11 @@ const operate = (number1, number2, operation) => {
     case 'X':
       return num1.mul(num2).toString();
     case '÷':
-      if (num2 === 0) return "Can't divide by zero";
-      return num1.div(num2).toString();
+      if (num2 == 0) {
+        return "Can't divide by zero";
+      } else {
+        return num1.div(num2).toString();
+      }
     case '%':
       return num1.mod(num2).toString();
     default:
