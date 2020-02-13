@@ -41,7 +41,7 @@ const calculate = (calcData, btnName) => {
         return { total: operate(total, next, operation), next: null, operation: null };
       }
       return { total, next: null, operation: btnName };
-    case '/':
+    case '÷':
       if (next && operation) {
         return { total: operate(total, next, operation), next: null, operation: null };
       }

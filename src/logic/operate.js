@@ -10,7 +10,7 @@ const operate = (number1, number2, operation) => {
       return num1.minus(num2).toString();
     case 'X':
       return num1.mul(num2).toString();
-    case '/':
+    case '÷':
       if (num2 === 0) return "Can't divide by zero";
       return num1.div(num2).toString();
     case '%':
