@@ -1,21 +1,33 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './Button.css';
 
-const button = ({ name, background, wide }) => (
-  <button
-    style={wide ? { width: '50%', backgroundColor: background } : { width: '25%', backgroundColor: background }}
-    className="button"
-    type="button"
-  >
-    {name}
-  </button>
-);
+class button extends Component {
+  handleClick = () => {
+    const { clickHandler, name } = this.props;
+    clickHandler(name);
+  };
+
+  render() {
+    const { name, background, wide } = this.props;
+    return (
+      <button
+        style={wide ? { width: '50%', backgroundColor: background } : { width: '25%', backgroundColor: background }}
+        className="button"
+        type="button"
+        onClick={this.handleClick}
+      >
+        {name}
+      </button>
+    );
+  }
+}
 
 button.propTypes = {
   name: PropTypes.string.isRequired,
   wide: PropTypes.bool,
   background: PropTypes.string,
+  clickHandler: PropTypes.func.isRequired,
 };
 
 button.defaultProps = {
